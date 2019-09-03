@@ -23,7 +23,7 @@
         <div class="col-sm-4 border border-primary shadow rounded pt-2">
             <div class="col-sm-12">
                 <h3 style="text-align: center; color: lightseagreen;">Kedel Registration</h3>
-                <form method="post" id="singnupFrom" onSubmit="return validation();">
+                <form method="post" id="singnupFrom" onSubmit="return validation()" autocomplete="off";>
                     <div class="form-group">
                         <label class="font-weight-bold">ე-მაილი</label>
                         <div class="input-group">
