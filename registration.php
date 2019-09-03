@@ -52,8 +52,8 @@
                         <div class="form-group">
                             <label><input type="checkbox" name="condition" id="condition"> ვეთანხმები <a href="javascript:;">რეგისტრაციის წესებს</label>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" value="რეგისტრაცია" class="btn btn-block btn-danger">
+                        <div class="form-group" align="center">
+                            <button class="btn btn-success" type="submit">რეგისტრაცია</button>
                         </div>
                     </div>
                 </form>
