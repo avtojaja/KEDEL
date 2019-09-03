@@ -22,7 +22,7 @@
     <div class="row justify-content-md-center">
         <div class="col-sm-4 border border-primary shadow rounded pt-2">
             <div class="col-sm-12">
-                <h3 style="text-align: center;">Kedel Registration</h3>
+                <h3 style="text-align: center;" "color: lightseagreen;">Kedel Registration</h3>
                 <form method="post" id="singnupFrom" onSubmit="return validation();">
                     <div class="form-group">
                         <label class="font-weight-bold">ე-მაილი</label>
