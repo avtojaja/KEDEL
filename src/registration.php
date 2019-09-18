@@ -12,12 +12,12 @@
 </head>
 
 <body class="registration">
-    <div class="container mt-2 mb-4">
-        <div class="row justify-content-md-center">
-            <div class="col-sm-4 border border-primary shadow rounded pt-2">
+    <div class="container">
+        <div class="row justify-content-md-center my-5">
+            <div class="col-sm-6 border border-primary shadow rounded py-2">
                 <div class="col-sm-12">
-                    <h3>KEDEL-ზე რეგისტრაცია</h3>
-                    <form method="post" id="singnupFrom" autocomplete="off">
+                    <h3 class="py-3">KEDEL-ზე რეგისტრაცია</h3>
+                    <form method="post" autocomplete="off">
                         <div class="form-group">
                             <label class="font-weight-bold">ელ. ფოსტა</label>
                             <div class="input-group">
@@ -28,7 +28,7 @@
                         <div id="next-form" class="collapse">
                             <div class="form-group">
                                 <label class="font-weight-bold">სახელი <small class="text-dark"><em>ეს იქნება შენი მომხმარებლის სახელი</em></small></label>
-                                <input type="text" name="username" id="username" class="form-control" placeholder="ამოირჩიეთ მომხმარებლის სახელი">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="აირჩიეთ მომხმარებლის სახელი">
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">მობილური #</label>
@@ -41,10 +41,12 @@
                             <div class="form-group">
                                 <label class="font-weight-bold">გაიმეორეთ პაროლი</label>
                                 <input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="***********">
-                                <em id="cp"><span class="text-danger">პაროლი არ ემთხვევა!</span></em>
+                                <em id="cp"><span class="text-danger">პაროლები არ ემთხვევა!</span></em>
                             </div>
                             <div class="form-group">
-                                <label><input type="checkbox" name="condition" id="condition">ვეთანხმები <a href="#">რეგისტრაციის წესებს</a></label>
+                                <label>
+                                    <input type="checkbox" name="condition" id="condition">ვეთანხმები <a href="#" target="_blank">რეგისტრაციის წესებს</a>
+                                </label>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success" type="submit">რეგისტრაცია</button>
