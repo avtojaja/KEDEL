@@ -1,5 +1,5 @@
-(function ( $ ) {
-    $(function (e) {
+( function ( $ ) {
+    $( function () {
         $( '#username' ).on( 'keyup', function () {
             if ( ! $( '#username' ).val().length ) {
                 $( '#username' ).addClass( 'is-invalid' );
@@ -36,7 +36,7 @@
             }
         });
 
-        $( '.emailCheck' ).click(function () {
+        $( '.emailCheck' ).click( function () {
             if ( ! $( '#email' ).val().length ) {
                 $( '#email' ).addClass( 'is-invalid' );
                 return false;
@@ -52,7 +52,7 @@
             }
         });
 
-        $( '.registration form' ).submit(function () {
+        $( '.registration form' ).submit( function () {
             if ( ! $( '#username, #phone, #password, #cpassword' ).val().length ) {
                 $( '#username, #phone, #password, #cpassword' ).addClass( 'is-invalid' );
                 return false;
