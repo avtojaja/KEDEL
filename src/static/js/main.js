@@ -1,5 +1,25 @@
 ( function ( $ ) {
     $( function () {
+        $( '.emailCheck' ).click( function () {
+            var $email = $( '#email' );
+            var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,})$/;
+
+            $email.removeClass( 'is-invalid' );
+
+            if ( ! $email.val().length ) {
+                $email.addClass( 'is-invalid' );
+                return false;
+            }
+
+            if ( ! regMail.test( $email.val() ) ) {
+                $email.addClass( 'is-invalid' );
+                return false;
+            }
+
+            $email.prop( 'disabled', true );
+            $( '#next-form' ).collapse( 'show' );
+        });
+
         $( '#username' ).on( 'keyup', function () {
             if ( ! $( '#username' ).val().length ) {
                 $( '#username' ).addClass( 'is-invalid' );
@@ -33,22 +53,6 @@
                 return false;
             } else {
                 $( '#cpassword' ).removeClass( 'is-invalid' );
-            }
-        });
-
-        $( '.emailCheck' ).click( function () {
-            if ( ! $( '#email' ).val().length ) {
-                $( '#email' ).addClass( 'is-invalid' );
-                return false;
-            } else {
-                var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,})$/;
-                if ( ! regMail.test( $( '#email' ).val() ) ) {
-                    $( '#email' ).addClass( 'is-invalid' );
-                    return false;
-                } else {
-                    $( '#email' ).removeClass( 'is-invalid' );
-                    $( '#next-form' ).collapse( 'show' );
-                }
             }
         });
 
