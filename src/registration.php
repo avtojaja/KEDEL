@@ -53,7 +53,7 @@
                             <a href="#" target="_blank">რეგისტრაციის წესებს</a>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-success" type="submit">რეგისტრაცია</button>
+                            <button type="submit" name="submit" class="btn btn-success">რეგისტრაცია</button>
                         </div>
                     </div>
                 </form>
