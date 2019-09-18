@@ -21,7 +21,11 @@
                         <label for="email" class="font-weight-bold">ელ. ფოსტა</label>
                         <div class="input-group">
                             <input type="email" name="email" id="email" class="form-control" placeholder="მიუთითეთ მოქმედი ელ. ფოსტა">
-                            <div class="input-group-append"><button type="button" class="btn btn-primary emailCheck"><i class="fa fa-envelope"></i></button></div>
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary emailCheck">
+                                    <i class="fa fa-envelope"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div id="next-form" class="collapse">
