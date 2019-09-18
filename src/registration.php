@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body>
+<body class="registration">
     <div class="container mt-2 mb-4">
         <div class="row justify-content-md-center">
             <div class="col-sm-4 border border-primary shadow rounded pt-2">
                 <div class="col-sm-12">
-                    <h3 style="text-align: center; color: lightseagreen;">KEDEL-ზე რეგისტრაცია</h3>
-                    <form method="post" id="singnupFrom" onSubmit="return validation()" autocomplete="off">
+                    <h3>KEDEL-ზე რეგისტრაცია</h3>
+                    <form method="post" id="singnupFrom" autocomplete="off">
                         <div class="form-group">
                             <label class="font-weight-bold">ელ. ფოსტა</label>
                             <div class="input-group">
@@ -41,12 +41,12 @@
                             <div class="form-group">
                                 <label class="font-weight-bold">გაიმეორეთ პაროლი</label>
                                 <input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="***********">
-                                <em id="cp" style="display: none;"><span class="text-danger">პაროლი არ ემთხვევა!</span></em>
+                                <em id="cp"><span class="text-danger">პაროლი არ ემთხვევა!</span></em>
                             </div>
                             <div class="form-group">
-                                <label><input type="checkbox" name="condition" id="condition"> ვეთანხმები <a href="javascript:;">რეგისტრაციის წესებს</a></label>
+                                <label><input type="checkbox" name="condition" id="condition">ვეთანხმები <a href="#">რეგისტრაციის წესებს</a></label>
                             </div>
-                            <div class="form-group" align="center">
+                            <div class="form-group">
                                 <button class="btn btn-success" type="submit">რეგისტრაცია</button>
                             </div>
                         </div>
@@ -59,6 +59,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="static/js/main.js"></script>
-
 </body>
 </html>

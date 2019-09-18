@@ -1,0 +1,8 @@
+.registration h3 {
+    text-align: center;
+    color: lightseagreen;
+}
+
+.registration #cp {
+    display: none;
+}
