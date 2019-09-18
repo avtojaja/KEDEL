@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>რეგისტრაცია</title>
+<title>KEDEL-ზე რეგისტრაცია</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -84,7 +84,7 @@ $(function(e) {
         }else{
             $("#username, #phone, #password, #cpassword").removeClass('is-invalid');
         }
-         
+
         if($("#password").val()!=$("#cpassword").val()){
             $("#cpassword").addClass('is-invalid');
             $("#cp").show();
@@ -127,7 +127,7 @@ $(function(e) {
             $("#cpassword").removeClass('is-invalid');
         }
     });
-    
+
     $(".emailCheck").click(function(){
         return emailCheck();
     });
