@@ -17,7 +17,7 @@
         <div class="row justify-content-md-center my-5">
             <div class="col-sm-6 border border-primary shadow rounded p-4">
                 <h3 class="pb-3">KEDEL-ზე რეგისტრაცია</h3>
-                <form action="/registration/process" method="post" autocomplete="off">
+                <form action="registration-process.php" method="post" autocomplete="off">
                     <div class="form-group">
                         <label for="email" class="font-weight-bold">ელ. ფოსტა</label>
                         <div class="input-group">
