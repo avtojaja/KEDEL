@@ -4,6 +4,9 @@ session_start();
 // deny loading in <iframe>
 header( 'X-Frame-Options: DENY' );
 
+// set HttpOnly flag to session cookie
+ini_set( 'session.cookie_httponly', 1 );
+
 // prepare database configuration
 $DB = [
     'host' => 'localhost',
