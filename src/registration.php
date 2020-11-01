@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label for="cpassword" class="font-weight-bold">გაიმეორეთ პაროლი</label>
                             <input type="password" name="cpassword" id="cpassword" class="form-control notempty" placeholder="***********" required>
-                            <em id="cp"><span class="text-danger">პაროლები არ ემთხვევა!</span></em>
+                            <em class="pass-no-match"><span class="text-danger">პაროლები არ ემთხვევა!</span></em>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="condition" id="condition" required>
