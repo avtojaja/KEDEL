@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+// deny loading in <iframe>
+header( 'X-Frame-Options: DENY' );
+
 // prepare database configuration
 $DB = [
     'host' => 'localhost',
