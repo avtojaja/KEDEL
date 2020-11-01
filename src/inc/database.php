@@ -11,4 +11,26 @@ class DB {
             die('Connect Error: ' . $this->mysqli->connect_error);
         }
     }
+
+    function login($email, $password)
+    {
+        $user = false;
+
+        $query = "
+            SELECT
+                users.*
+            FROM users
+            WHERE
+                users.email = '$email'
+            AND users.password = '$password'
+            LIMIT 1
+        ";
+
+        if ($result = $this->mysqli->query($query)) {
+            $user = $result->fetch_object();
+            $result->close();
+        }
+
+        return $user;
+    }
 }
