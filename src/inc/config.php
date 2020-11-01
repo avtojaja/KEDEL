@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // prepare database configuration
 $DB = [
