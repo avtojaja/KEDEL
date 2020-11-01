@@ -1,3 +1,6 @@
+<?php
+require_once './inc/config.php';
+?>
 <!DOCTYPE html>
 <html lang="ka">
 <head>
@@ -14,14 +17,34 @@
 
 <body class="main">
     <div class="container">
-        <div class="row justify-content-md-center my-5">
-            <div class="col-sm-6 border border-primary shadow rounded p-4 text-center">
-                <h3>KEDEL</h3>
-                <h6 class="text-secondary pb-3">მარტივი სოციალური ქსელი</h6>
-                <a href="registration.php" class="btn btn-primary">რეგისტრაცია</a>
-                <a href="login.php" class="btn btn-secondary">შესვლა</a>
+
+        <?php if (!isset($_SESSION['userid'])) : ?>
+
+            <div class="row justify-content-md-center my-5">
+                <div class="col-sm-6 border border-primary shadow rounded p-4 text-center">
+                    <h3>KEDEL</h3>
+                    <h6 class="text-secondary pb-3">მარტივი სოციალური ქსელი</h6>
+                    <a href="registration.php" class="btn btn-primary">რეგისტრაცია</a>
+                    <a href="login.php" class="btn btn-secondary">შესვლა</a>
+                </div>
             </div>
-        </div>
+
+        <?php else: ?>
+
+            <div class="row header-nav">
+                <div class="col-md-4">
+                    <a href="post.php">POST</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="index.php">FEED</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="profile.php">PROFILE</a>
+                </div>
+            </div>
+
+        <?php endif; ?>
+
     </div>
 </body>
 </html>

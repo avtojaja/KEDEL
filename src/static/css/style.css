@@ -7,3 +7,17 @@
 .registration #cp {
     display: none;
 }
+
+.header-nav > div {
+    padding: 0;
+}
+
+.header-nav a {
+    display: block;
+    padding: 20px 0;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: rgb(38, 143, 192);
+}
