@@ -39,18 +39,18 @@ if (!$user = $db->get_user($_SESSION['userid'])) {
             <div class="col-md-12 px-0 py-4">
                 <h3 class="header pb-3">
                     <span>Your Profile:</span>
-                    <strong><?php echo $_SESSION['username']; ?></strong>
+                    <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong>
                 </h3>
                 <form action="profile-process.php" method="post" autocomplete="off">
                     <div class="form-group">
                         <div class="form-group">
                             <label for="email" class="font-weight-bold">Email</label>
-                            <input type="email" id="email" class="form-control" value="<?php echo $user->email; ?>" disabled>
+                            <input type="email" id="email" class="form-control" value="<?php echo htmlspecialchars($user->email); ?>" disabled>
                         </div>
 
                         <div class="form-group">
                             <label for="phone" class="font-weight-bold">Phone</label>
-                            <input type="text" name="phone" id="phone" class="form-control notempty" placeholder="(500)-(0000000)" value="<?php echo $user->phone; ?>" required>
+                            <input type="text" name="phone" id="phone" class="form-control notempty" placeholder="(500)-(0000000)" value="<?php echo htmlspecialchars($user->phone); ?>" required>
                         </div>
 
                         <div class="form-group">
