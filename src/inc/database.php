@@ -33,4 +33,25 @@ class DB {
 
         return $user;
     }
+
+    function add_post($user_id, $post)
+    {
+        $newpost = false;
+
+        $query = "
+            INSERT INTO posts (
+                user_id,
+                post
+            ) VALUES (
+                '$user_id',
+                '$post'
+            )
+        ";
+
+        if ($this->mysqli->query($query)) {
+            $newpost = $this->mysqli->insert_id;
+        }
+
+        return $newpost;
+    }
 }
