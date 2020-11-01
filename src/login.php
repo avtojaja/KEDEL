@@ -1,3 +1,11 @@
+<?php
+require_once './inc/config.php';
+
+if ($db->is_logged_in()) {
+    header('Location: ./index.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="ka">
 <head>

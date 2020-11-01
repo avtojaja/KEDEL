@@ -1,10 +1,6 @@
 <?php
 require_once './inc/config.php';
-
-if (!isset($_SESSION['userid'])) {
-    header('Location: ./index.php');
-    exit;
-}
+$db->require_login();
 
 if (!$user = $db->get_user($_SESSION['userid'])) {
     header('Location: ./index.php');

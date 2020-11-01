@@ -18,7 +18,7 @@ require_once './inc/config.php';
 <body class="main">
     <div class="container">
 
-        <?php if (!isset($_SESSION['userid'])) : ?>
+        <?php if (!$db->is_logged_in()) : ?>
 
             <div class="row justify-content-md-center my-5">
                 <div class="col-sm-6 border border-primary shadow rounded p-4 text-center">
