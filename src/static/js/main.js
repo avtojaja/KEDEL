@@ -32,7 +32,18 @@
         $( '.registration form' ).submit( function () {
             if ( $( '#password' ).val() !== $( '#cpassword' ).val() ) {
                 $( '#cpassword' ).addClass( 'is-invalid' );
-                $( '#cp' ).show();
+                $( '.pass-no-match' ).show();
+                return false;
+            }
+
+            return true;
+        });
+
+        $( '.profile form' ).submit( function () {
+            if ( $( '#new_password' ).val() !== $( '#repeat_password' ).val() ) {
+                $( '#new_password' ).addClass( 'is-invalid' );
+                $( '#repeat_password' ).addClass( 'is-invalid' );
+                $( '.pass-no-match' ).show();
                 return false;
             }
 

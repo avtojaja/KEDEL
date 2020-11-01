@@ -54,4 +54,46 @@ class DB {
 
         return $newpost;
     }
+
+    function get_user($user_id)
+    {
+        $user = false;
+
+        $query = "
+            SELECT
+                users.*
+            FROM users
+            WHERE
+                users.id = '$user_id'
+            LIMIT 1
+        ";
+
+        if ($result = $this->mysqli->query($query)) {
+            $user = $result->fetch_object();
+            $result->close();
+        }
+
+        return $user;
+    }
+
+    function update_user($user_id, $phone, $password)
+    {
+        $user = false;
+
+        $query = "
+            UPDATE
+                users
+            SET
+                phone = '$phone',
+                password = '$password'
+            WHERE
+                id = '$user_id'
+        ";
+
+        if ($this->mysqli->query($query)) {
+            $user = $user_id;
+        }
+
+        return $user;
+    }
 }
