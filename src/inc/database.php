@@ -34,6 +34,19 @@ class DB {
         return $user;
     }
 
+    function is_logged_in()
+    {
+        return isset($_SESSION['userid']);
+    }
+
+    function require_login()
+    {
+        if (!$this->is_logged_in()) {
+            header('Location: ./index.php');
+            exit;
+        }
+    }
+
     function add_post($user_id, $post)
     {
         $newpost = false;
